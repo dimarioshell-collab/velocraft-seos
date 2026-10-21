@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Без maximum-scale: запрет масштабирования ломает доступность и режется в Lighthouse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+
+    <!--seo-head-->
+
+    <!-- Шрифты: один запрос вместо цепочки @import из CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <!-- Главная картинка — LCP: грузим сразу -->
+    <link rel="preload" as="image" href="%BASE_URL%velocraft-bike.webp" type="image/webp" fetchpriority="high" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

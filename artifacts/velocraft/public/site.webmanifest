@@ -1,0 +1,17 @@
+{
+  "name": "VeloCraft — ремонт и кастомные велосипеды",
+  "short_name": "VeloCraft",
+  "description": "Веломастерская в Москве: ремонт, удалённая сборка, подбор компонентов и кастомные велосипеды.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#242a3d",
+  "theme_color": "#242a3d",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

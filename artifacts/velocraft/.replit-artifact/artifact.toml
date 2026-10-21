@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "VeloCraft — ремонт и кастомные велосипеды"
+description = "Современный сайт веломастерской: ремонт, удалённая сборка, подбор деталей и индивидуальные кастомные велосипеды с удобными каналами связи."
+version = "1.0.0"
+id = "artifacts/velocraft"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19465
+
+[services.development]
+run = "pnpm --filter @workspace/velocraft run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/velocraft", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/velocraft/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19465"
+BASE_PATH = "/"
